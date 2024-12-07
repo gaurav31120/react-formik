@@ -12,3 +12,8 @@ useFormik({}) ----> object inside parameter
 This object contains the properties and methods to manage form states.
 
 5 handleChange ----> this method is formik's helper to update the values objects.
+
+7. There are three parts of validation:
+   values.name 
+   errors.name 
+   errors.name = 'This field is required
