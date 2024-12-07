@@ -7,3 +7,5 @@ validation
 Error messages 
 handle form submission
 
+4 use formik uses object as its parameter.
+useFormik({}) ----> object inside parameter
