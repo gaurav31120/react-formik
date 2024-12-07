@@ -9,3 +9,6 @@ handle form submission
 
 4 use formik uses object as its parameter.
 useFormik({}) ----> object inside parameter
+This object contains the properties and methods to manage form states.
+
+5 handleChange ----> this method is formik's helper to update the values objects.
