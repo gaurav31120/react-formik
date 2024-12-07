@@ -149,4 +149,25 @@ const formik = useFormik({
                 <Field type="text" id="secondfaryPh" name="phoneNumbers[1]" />
                 </div>
 
+23 FastField Component ---- stops rerender for other fields in console. Means if we console in address 
+field then only the console should render if we write something in address field. 
+If we write something in other field then rendering of address console value should not happen.
+Please refer to internet.
 
+     1 import {FastField} from "formik";
+
+     2 <FastField name="address">
+            {(props) => {
+              console.log("Field render");
+              const { field, form, meta } = props;
+              console.log("props", props);
+
+              return (
+                <div>
+                  <input type="text" id="address" {...field} />
+                  {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+                </div>
+              );
+            }}
+          </FastField>
+          
