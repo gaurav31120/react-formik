@@ -7,6 +7,7 @@ const initialValues = {
   name: "gaurav",
   email: "",
   channel: "",
+  comments: "",
 };
 const onSubmit = (values) => {
   console.log("form data", values);
@@ -41,6 +42,7 @@ function YoutubeForm() {
             type="text"
             id="name"
             name="name"
+            placeholder="Enter name"
             // {...formik.getFieldProps("name")}
           />
           <ErrorMessage name="name" />
@@ -54,6 +56,7 @@ function YoutubeForm() {
             type="email"
             id="email"
             name="email"
+            placeholder="Enter email"
             // {...formik.getFieldProps("email")}
           />
           <ErrorMessage name="email" />
@@ -67,12 +70,17 @@ function YoutubeForm() {
             type="text"
             id="channel"
             name="channel"
+            placeholder="Enter chaanel"
             // {...formik.getFieldProps("channel")}
           />
           <ErrorMessage name="channel" />
           {/* {formik.touched.channel && formik.errors.channel ? (
             <div className="error">{formik.errors.channel}</div>
           ) : null} */}
+        </div>
+        <div className="form-control">
+          <label htmlFor="comments">Comments</label>
+          <Field as="textarea" id="comments" name="comments"></Field>
         </div>
         <button type="submit">Submit</button>
       </Form>

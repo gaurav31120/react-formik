@@ -72,3 +72,12 @@ const formik = useFormik({
     <ErrorMessage  name="name"/>
 
     Here, "name" is the name you have give to the field.
+
+17. Field Revisited:
+    1 There are some more (additional) props used in Field component.
+            1. name="name"
+            2. id="id"
+            3. placeholder:"Please enter a name"
+
+    2 Ability to render differnt element other than the input element.
+            1. Add text area field in form
