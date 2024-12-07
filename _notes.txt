@@ -35,3 +35,19 @@ Some components Formik provides:
 2. Form
 3. field
 4. ErrorMessage
+
+Formik component:
+import Formik from 'Formik'
+Remove useFormik function and put the contents of useFormik inside <Formik>Put here</Formik>
+const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema,
+    // validate,
+  });
+
+
+14. Form component:
+    1. Import Form from 'Formik
+    2. Replace html form element with Form component
+    3. Remove the onSubmit prop  -----> onSubmit={formik.handleSubmit}

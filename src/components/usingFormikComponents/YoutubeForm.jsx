@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Form } from "formik";
 // import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -27,14 +27,14 @@ function YoutubeForm() {
   //   });
   // console.log("Form values", formik.values);
   //   console.log("Form errors", formik.errors);
-  console.log("Form visited fields", formik.touched);
+//   console.log("Form visited fields", formik.touched);
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      <form onSubmit={formik.handleSubmit}>
+      <Form>
         <div className="form-control">
           <label htmlFor="name">Name</label>
           <input
@@ -72,7 +72,7 @@ function YoutubeForm() {
           ) : null}
         </div>
         <button type="submit">Submit</button>
-      </form>
+      </Form>
     </Formik>
   );
 }
