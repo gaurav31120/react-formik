@@ -28,3 +28,10 @@ Instead the above 3 lines we can write
 {...formik.getFieldProps('name')} 
 
 we can write whatever the field name is in place of "name.
+
+13. Formik components: To save time formik provides few components that implicitly uses react context tom make our code less verbose. (shorten the code)
+Some components Formik provides:
+1. Formik
+2. Form
+3. field
+4. ErrorMessage
