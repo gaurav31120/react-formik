@@ -101,3 +101,13 @@ const formik = useFormik({
             }}
           </Field> 
 
+19 ErrorMessage Revisited ---- various methods to show errors 
+    1. using component props
+    <ErrorMessage name="name" component={TextError} />
+    2. using render props pattern to show error msg
+    <ErrorMessage name="email">
+            {(errorMsg) => {
+              <div className="error">{errorMsg}</div>;
+            }}
+          </ErrorMessage>
+

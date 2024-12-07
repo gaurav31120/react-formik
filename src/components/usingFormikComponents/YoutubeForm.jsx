@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 // import { useFormik } from "formik";
 import * as Yup from "yup";
+import TextError from "./TextError";
 
 const initialValues = {
   name: "gaurav",
@@ -46,7 +47,7 @@ function YoutubeForm() {
             placeholder="Enter name"
             // {...formik.getFieldProps("name")}
           />
-          <ErrorMessage name="name" />
+          <ErrorMessage name="name" component={TextError} />
           {/* <{formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
           ) : null}> */}
@@ -60,7 +61,11 @@ function YoutubeForm() {
             placeholder="Enter email"
             // {...formik.getFieldProps("email")}
           />
-          <ErrorMessage name="email" />
+          <ErrorMessage name="email">
+            {(errorMsg) => {
+              <div className="error">{errorMsg}</div>;
+            }}
+          </ErrorMessage>
           {/* {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
           ) : null} */}
