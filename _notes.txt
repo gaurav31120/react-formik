@@ -51,3 +51,8 @@ const formik = useFormik({
     1. Import Form from 'Formik
     2. Replace html form element with Form component
     3. Remove the onSubmit prop  -----> onSubmit={formik.handleSubmit}
+
+15. Field component
+    1. import Field from Formik
+    2. replace each input tag with Field component tag
+    3. get rid of(remove) getFieldProps helper method from each of the fields
