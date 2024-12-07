@@ -32,7 +32,16 @@ const validationSchema = Yup.object({
   name: Yup.string().required("Required!"),
   email: Yup.string().email("Invalid email format!").required("Required!"),
   channel: Yup.string().required("Required!"),
+  // comments: Yup.string().required("Required"),
 });
+
+const validateComments = (value) => {
+  let error;
+  if (!value) {
+    error = "required c";
+  }
+  return error;
+};
 
 function YoutubeForm() {
   // const formik = useFormik({
@@ -49,8 +58,8 @@ function YoutubeForm() {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
-      validateOnChange={false}
-      validateOnBlur={false}
+      // validateOnChange={false}
+      // validateOnBlur={false}
     >
       <Form>
         <div className="form-control">
@@ -101,7 +110,13 @@ function YoutubeForm() {
         </div>
         <div className="form-control">
           <label htmlFor="comments">Comments</label>
-          <Field as="textarea" id="comments" name="comments"></Field>
+          <Field
+            as="textarea"
+            id="comments"
+            name="comments"
+            validate={validateComments}
+          ></Field>
+          <ErrorMessage name="comments" component={TextError} />
         </div>
         <div className="form-control">
           <label htmlFor="addresss">Address</label>

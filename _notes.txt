@@ -187,3 +187,22 @@ for 1 and 2 scenario.
                     <Formik
                     validateOnBlur={false}
                     > </Formik>
+
+25 Field Level Validation (another way)
+
+                const validateComments = (value) => {
+                let error;
+                if (!value) {
+                    error = "required c";
+                }
+                return error;
+                };
+
+
+                    <Field
+                as="textarea"
+                id="comments"
+                name="comments"
+----->>>>>      validate={validateComments} 
+                ></Field>
+                <ErrorMessage name="comments" component={TextError} />
