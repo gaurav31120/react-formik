@@ -7,13 +7,24 @@ validation
 Error messages 
 handle form submission
 
-4 use formik uses object as its parameter.
+4. use formik uses object as its parameter.
 useFormik({}) ----> object inside parameter
 This object contains the properties and methods to manage form states.
 
-5 handleChange ----> this method is formik's helper to update the values objects.
+5. handleChange ----> this method is formik's helper to update the values objects.
 
 7. There are three parts of validation:
    values.name 
    errors.name 
    errors.name = 'This field is required
+
+12. We can use this for refactoring the code:
+
+onChange={formik.handleChange}  
+onBlur={formik.handleBlur}
+alue={formik.values.name}
+
+Instead the above 3 lines we can write 
+{...formik.getFieldProps('name')} 
+
+we can write whatever the field name is in place of "name.
