@@ -1,0 +1,18 @@
+Here, i will create react app using formik for creating forms and yup for validation.
+Tech used:
+HTML
+CSS
+JS
+React 
+Formik
+Yup
+
+Things to do:
+1.Build a simple form
+2.useFormik hook
+3.Manage the form state
+4.Handle form submission
+5.Form validation
+6.Formik components
+7.Reusable components for input , text area, select dropdown, radio buttons, checkboxes.
+8.Build user registration form

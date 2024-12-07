@@ -1,0 +1,9 @@
+
+Formik is a small library helps to deal with forms in React.
+
+Formik used for:
+Handle (Managing) form data
+validation
+Error messages 
+handle form submission
+
