@@ -170,4 +170,20 @@ Please refer to internet.
               );
             }}
           </FastField>
-          
+
+24 When does validation run
+    1 Formik run validation after any change eventin the form (onChange)
+    2 Formik run validation after any Blur event in any form (onBlur)
+    3 Formik run validation after any form submission (attempt to Submit the form ---- onSubmit())
+
+If you domn't want Formik to automatically run validation function.So, for this formik provides two props 
+for 1 and 2 scenario.
+    1 validateOnChange={false}
+                    <Formik
+                    validateOnChange={false}
+                    > </Formik>
+
+    2 validateOnBlur={false}
+                    <Formik
+                    validateOnBlur={false}
+                    > </Formik>
