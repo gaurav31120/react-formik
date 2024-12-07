@@ -3,4 +3,5 @@ Project: Form validation and submission using formik and yup
 2 info and notes 
 3 creating simple react form
 4 importing formik and importing in file to use
-5 declaring initial values and using formik in inputs
+5 declaring initial values and using formik in inputs -- initial values handle handleChange
+6 Handling form submission using formik.handle submit -- onSubmit handleSubmit
