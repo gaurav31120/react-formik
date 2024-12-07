@@ -111,3 +111,21 @@ const formik = useFormik({
             }}
           </ErrorMessage>
 
+20 Nested Objects  ---- creating nested objects in initial values
+
+            social: {
+                facebook: "",
+                twitter: "",
+            }
+
+using these nested objects for creating input fields
+
+            <div className="form-control">
+                    <label htmlFor="facebook">facebook profile</label>
+                    <Field type="text" id="facebook" name="social.facebook" />
+                    </div>
+                    <div className="form-control">
+                    <label htmlFor="twitter">facebook profile</label>
+                    <Field type="text" id="twitter" name="social.twitter" />
+                    </div>
+
