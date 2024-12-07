@@ -6,3 +6,4 @@ Project: Form validation and submission using formik and yup
 5 declaring initial values and using formik in inputs -- initial values handle handleChange
 6 Handling form submission using formik.handle submit -- onSubmit handleSubmit
 7 Writing validate function
+8 shortning the formik literals:  initialValues onSubmit validate
