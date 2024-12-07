@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 // import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -43,9 +43,10 @@ function YoutubeForm() {
             name="name"
             // {...formik.getFieldProps("name")}
           />
-          {formik.touched.name && formik.errors.name ? (
+          <ErrorMessage name="name" />
+          {/* <{formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
-          ) : null}
+          ) : null}> */}
         </div>
         <div className="form-control">
           <label htmlFor="email">Email</label>
@@ -55,9 +56,10 @@ function YoutubeForm() {
             name="email"
             // {...formik.getFieldProps("email")}
           />
-          {formik.touched.email && formik.errors.email ? (
+          <ErrorMessage name="email" />
+          {/* {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
-          ) : null}
+          ) : null} */}
         </div>
         <div className="form-control">
           <label htmlFor="channel">Channel</label>
@@ -67,9 +69,10 @@ function YoutubeForm() {
             name="channel"
             // {...formik.getFieldProps("channel")}
           />
-          {formik.touched.channel && formik.errors.channel ? (
+          <ErrorMessage name="channel" />
+          {/* {formik.touched.channel && formik.errors.channel ? (
             <div className="error">{formik.errors.channel}</div>
-          ) : null}
+          ) : null} */}
         </div>
         <button type="submit">Submit</button>
       </Form>

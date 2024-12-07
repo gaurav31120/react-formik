@@ -48,11 +48,27 @@ const formik = useFormik({
 
 
 14. Form component:
-    1. Import Form from 'Formik
+    1. Import Form from 'Formik'
     2. Replace html form element with Form component
     3. Remove the onSubmit prop  -----> onSubmit={formik.handleSubmit}
 
 15. Field component
-    1. import Field from Formik
+    1. import Field from 'Formik'
     2. replace each input tag with Field component tag
     3. get rid of(remove) getFieldProps helper method from each of the fields
+
+16. ErrorMessage Component
+    1. import ErrorMessage from 'Formik'
+    2. Replace the block of code rendering the error message with ErrorMessage component
+
+     {formik.touched.name && formik.errors.name ? (
+            <div className="error">{formik.errors.name}</div>
+            ) : null}
+
+            Replace this code by <ErrorMessage />
+
+    3. Pass in a name prop which is equal to the name attribute on the Field Component.
+
+    <ErrorMessage  name="name"/>
+
+    Here, "name" is the name you have give to the field.
