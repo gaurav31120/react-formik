@@ -80,4 +80,24 @@ const formik = useFormik({
             3. placeholder:"Please enter a name"
 
     2 Ability to render differnt element other than the input element.
-            1. Add text area field in form
+            1. Add text area field in form using as
+
+18. Field Revisited:
+
+    3. Render props pattern for more fine grain control over the Form Field
+             field, form, meta 
+
+            <Field name="address">
+            {(props) => {
+              const { field, form, meta } = props;
+              console.log("props", props);
+
+              return (
+                <div>
+                  <input type="text" id="address" {...field} />
+                  {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+                </div>
+              );
+            }}
+          </Field> 
+
