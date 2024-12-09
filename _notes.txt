@@ -253,4 +253,11 @@ as an argunmet for which field touch has to be enabled.
 
 29. enableReinitialize ---- this props can decide whether the form can be changed
 the initial values after the form has initialized once with new values.
+
+30. 30 Reset form data: 2 Scenario:
+   1. Reset form data with reset button
+      <button type="reset">Reset</button>
+   2. Resetting the form data when form submission has been completed
+      onSubmitProps.resetForm(); ----> form will get submitted and at the same time
+      form data has been reset.
          
