@@ -206,3 +206,15 @@ for 1 and 2 scenario.
 ----->>>>>      validate={validateComments} 
                 ></Field>
                 <ErrorMessage name="comments" component={TextError} />
+
+26 Manually trigger form and field level validations:
+To manually trigger Formik provides with two helper methods. To access these methods 
+we need to use render props pattern of entire form itself.
+
+Use these two methods of validation (formik validation):
+1 formik.validateField ----> Validates the particular field
+2 formik ----> Validates all the fields
+
+1 setFieldTouched() ----> add the particular field to the touched object
+2 setTouched() ----> add multiple field to the touched object ---- It requires object 
+as an argunmet for which field touch has to be enabled.
