@@ -218,3 +218,24 @@ Use these two methods of validation (formik validation):
 1 setFieldTouched() ----> add the particular field to the touched object
 2 setTouched() ----> add multiple field to the touched object ---- It requires object 
 as an argunmet for which field touch has to be enabled.
+
+27. Disabling the submit button:
+    Two scenarios:
+              1. validaity of the form state: -----> Submit button to be disabled if the form 
+              state is invalid.
+              2. When form dubmission is in progress
+
+
+  1. validaity of the form state: -----> Submit button to be disabled if the form 
+    state is invalid.
+
+    isValid ----> is set to true if the errors object is empty. If there is no any error then
+    isValid is true.
+
+  validateOnMount ----> It runs all validations on page Load only. It makes isValid property
+  false on page load only (if error comes). This is good for less forms and simple calidations,
+  because if we have many forms then there is no use of running validations on every
+  page load.
+
+  dirty ----> If you have changed any one of the field values that is different from what 
+  was when it was initialized then dirty props become true.

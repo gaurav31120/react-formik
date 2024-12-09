@@ -58,6 +58,7 @@ function YoutubeForm() {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      // validateOnMount
       // validateOnChange={false}
       // validateOnBlur={false}
     >
@@ -124,7 +125,7 @@ function YoutubeForm() {
             <div className="form-control">
               <label htmlFor="addresss">Address</label>
               <FastField name="address">
-                {(props) => {
+                {/* {(props) => {
                   console.log("Field render");
                   const { field, form, meta } = props;
                   console.log("props", props);
@@ -137,7 +138,7 @@ function YoutubeForm() {
                       ) : null}
                     </div>
                   );
-                }}
+                }} */}
               </FastField>
             </div>
             <div className="form-control">
@@ -213,7 +214,9 @@ function YoutubeForm() {
             >
               Visit fields
             </button>
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!(formik.dirty && formik.isValid)}>
+              Submit
+            </button>
           </Form>
         );
       }}
