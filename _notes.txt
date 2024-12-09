@@ -239,3 +239,15 @@ as an argunmet for which field touch has to be enabled.
 
   dirty ----> If you have changed any one of the field values that is different from what 
   was when it was initialized then dirty props become true.
+
+
+  28. Disabling the submit button: 2
+      2. When form submission is in progress (form is submitting in the background)
+      while click on any button (api call has been occured) then here we will disable the
+       button after clicking oon time, because the user will try to click the button
+       multiple times.
+
+       isSubmitting ----> set to true if form submission has been attempted. So, here 
+       if isSubmitting is true (means form has been submitted) then disabled the submit 
+       button. 
+         
