@@ -10,13 +10,28 @@ import {
 // import { useFormik } from "formik";
 import * as Yup from "yup";
 import TextError from "./TextError";
+import { useState } from "react";
 
 const initialValues = {
-  name: "",
+  name: "gaurav",
   email: "",
   channel: "",
   comments: "",
   address: "",
+  social: {
+    facebook: "",
+    twitter: "",
+  },
+  phoneNumbers: ["", ""],
+  phNumbers: [""],
+};
+
+const savedValues = {
+  name: "gaurav",
+  email: "gaurav@e.com",
+  channel: "code with coke",
+  comments: "welcome to formik",
+  address: "jhgi ug uguu",
   social: {
     facebook: "",
     twitter: "",
@@ -46,6 +61,7 @@ const validateComments = (value) => {
 };
 
 function YoutubeForm() {
+  const [formValues, setFormValues] = useState(null);
   // const formik = useFormik({
   //     initialValues,
   //     onSubmit,
@@ -57,9 +73,10 @@ function YoutubeForm() {
   //   console.log("Form visited fields", formik.touched);
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={formValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
       // validateOnMount
       // validateOnChange={false}
       // validateOnBlur={false}
@@ -188,7 +205,7 @@ function YoutubeForm() {
                 }}
               </FieldArray>
             </div>
-            <button
+            {/* <button
               type="button"
               onClick={() => formik.validateField("comments")}
             >
@@ -215,6 +232,14 @@ function YoutubeForm() {
               }
             >
               Visit fields
+            </button> */}
+            <button
+              type="button"
+              onClick={() => {
+                setFormValues(savedValues);
+              }}
+            >
+              Load saved data
             </button>
             <button
               type="submit"

@@ -250,4 +250,7 @@ as an argunmet for which field touch has to be enabled.
        isSubmitting ----> set to true if form submission has been attempted. So, here 
        if isSubmitting is true (means form has been submitted) then disabled the submit 
        button. 
+
+29. enableReinitialize ---- this props can decide whether the form can be changed
+the initial values after the form has initialized once with new values.
          
